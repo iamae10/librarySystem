@@ -7,8 +7,7 @@ import java.awt.event.ActionListener;
 import java.awt.print.Book;
 
 public class LibrarySystemGUI extends JFrame implements ActionListener {
-   
-
+	
     public LibrarySystemGUI() {
         
     	setTitle("NU LIBRARY SYSTEM");
@@ -16,7 +15,6 @@ public class LibrarySystemGUI extends JFrame implements ActionListener {
 		setBounds(100, 100, 450, 300);
 		JPanel panel1= new JPanel();
 		panel1.setBorder(new EmptyBorder(5, 5, 5, 5));
-
 		setContentPane(panel1);
 		panel1.setLayout(null);
 		
@@ -27,14 +25,14 @@ public class LibrarySystemGUI extends JFrame implements ActionListener {
 		label1.setBounds(-13, 25, 344, 29);
 		panel1.add(label1);
 		
+		
 		JButton adminButton = new JButton("Admin");
 		adminButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		adminButton.setBounds(160, 98, 89, 23);
 		panel1.add(adminButton);
 		adminButton.addActionListener(new ActionListener() {
 			
-			
-			public void actionPerformed1(ActionEvent e) {
+	
 				JFrame frame2 = new JFrame("LOGIN");
 				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 				setBounds(100, 100, 450, 300);
@@ -68,15 +66,9 @@ public class LibrarySystemGUI extends JFrame implements ActionListener {
 				passwordtextfield1.setBounds(160, 98, 86, 20);
 				panel2.add(passwordtextfield1);
 				passwordtextfield1.setColumns(10);
-				String password1 = passwordtextfield1.getText();
 				
-				}
-
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				// TODO Auto-generated method stub
+			
 				
-			}
 		});
 
 		
@@ -84,6 +76,7 @@ public class LibrarySystemGUI extends JFrame implements ActionListener {
 		librarianButton.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		librarianButton.setBounds(160, 132, 89, 23);
 		panel1.add(librarianButton);
+		
 		librarianButton.addActionListener(new ActionListener() {
 			public void actionPerformed2(ActionEvent e2) {
 				JFrame frame3 = new JFrame("LOGIN");
@@ -121,13 +114,10 @@ public class LibrarySystemGUI extends JFrame implements ActionListener {
 				passwordtextfield2.setColumns(10);
 				String password2 = passwordtextfield2.getText();
                  
-				
-		
-    }
+			}
 
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
-		
+
+		public static void main(String[] args) {
+			new LibrarySystemGUI();
+		}
 	}
-}
